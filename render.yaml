@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: hussein-erp-backend
+    env: node
+    plan: free
+    region: frankfurt
+    branch: main
+    buildCommand: cd backend && npm ci
+    startCommand: cd backend && node src/server.js
+    healthCheckPath: /api/health
